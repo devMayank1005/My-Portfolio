@@ -1,0 +1,105 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* ---------- App Background ---------- */
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url('/mac-wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Dock ---------- */
+.dock {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 0.75rem;
+
+  padding: 0.75rem 1rem;
+  border-radius: 0.9rem;
+
+  background: rgba(70, 70, 70, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Dock Icons ---------- */
+.icon {
+  width: 3.75rem;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.6rem;
+  border-radius: 0.55rem;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ---------- SVG sizing ---------- */
+.icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ---------- Hover physics (macOS-like) ---------- */
+.icon:hover {
+  transform: translateY(-35%) scale(1.35);
+}
+
+.icon:hover + .icon,
+.icon:has(+ .icon:hover) {
+  transform: translateY(-20%) scale(1.15);
+}
+
+/* ---------- Icon color themes ---------- */
+.github,
+.cli {
+  background: #000;
+}
+
+.note {
+  background: linear-gradient(to bottom, rgb(255, 179, 87), rgb(255, 153, 28));
+}
+
+.pdf {
+  background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40));
+}
+
+.calendar,
+.mail {
+  background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255));
+}
+
+.spotify {
+  background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12));
+}
+
+.link {
+  background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 154));
+}
