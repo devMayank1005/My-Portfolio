@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with React frontend, Node.js backend, and MongoDB database. Features include product filtering, cart management, payment integration, and admin dashboard.",
+    "tags": ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
+    "repoLink": "https://github.com/yourusername/ecommerce-platform",
+    "demoLink": "https://ecommerce-platform-demo.vercel.app"
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1460925895917-adf4e9eed4c1?w=500&h=300&fit=crop",
+    "title": "Real-Time Chat Application",
+    "description": "A feature-rich chat application with real-time messaging using WebSocket, user authentication, group chat support, and emoji reactions. Built with React and Express.js.",
+    "tags": ["React", "Express.js", "Socket.io", "Firebase", "Tailwind CSS"],
+    "repoLink": "https://github.com/yourusername/chat-app",
+    "demoLink": "https://realtime-chat-app.vercel.app"
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
+    "title": "Task Management Dashboard",
+    "description": "A collaborative task management tool with drag-and-drop functionality, real-time updates, team collaboration features, and progress tracking. Includes calendar and timeline views.",
+    "tags": ["React", "Next.js", "Firebase", "Drag-Drop", "Material-UI"],
+    "repoLink": "https://github.com/yourusername/task-dashboard",
+    "demoLink": "https://task-dashboard-demo.vercel.app"
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1526374965328-7f5afed360e9?w=500&h=300&fit=crop",
+    "title": "Machine Learning Model API",
+    "description": "RESTful API for machine learning model inference with Python Flask backend, model serving, batch processing, and rate limiting. Includes comprehensive API documentation.",
+    "tags": ["Python", "Flask", "TensorFlow", "Docker", "PostgreSQL"],
+    "repoLink": "https://github.com/yourusername/ml-api-service",
+    "demoLink": "https://ml-api-docs.herokuapp.com"
+  },
+  {
+    "id": 5,
+    "image": "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=500&h=300&fit=crop",
+    "title": "Social Media Feed",
+    "description": "Instagram-like social media platform with feed algorithms, like/comment system, user profiles, image optimization, and notification system using React and Firebase.",
+    "tags": ["React", "Firebase", "Redux", "Image Optimization", "WebP"],
+    "repoLink": "https://github.com/yourusername/social-feed",
+    "demoLink": "https://social-feed-app.vercel.app"
+  },
+  {
+    "id": 6,
+    "image": "https://images.unsplash.com/photo-1525694714437-21cc028cb882?w=500&h=300&fit=crop",
+    "title": "Weather Forecast App",
+    "description": "Beautiful weather application with real-time data, 5-day forecast, interactive maps, location search, and weather alerts. Built with React and OpenWeather API integration.",
+    "tags": ["React", "API Integration", "Maps", "Charts", "SASS"],
+    "repoLink": "https://github.com/yourusername/weather-app",
+    "demoLink": "https://weather-forecast-live.vercel.app"
+  }
+]

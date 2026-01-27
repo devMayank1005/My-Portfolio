@@ -7,7 +7,7 @@ const Nav = () => {
         <nav>
             <div className="left">
                 <div className="apple-icon">
-                    <img src="./navbar-icons/apple.svg" alt="" />
+                    <img src="/navbar-icon/apple.svg" alt="" />
                 </div>
 
                 <div className="nav-item">
