@@ -1,26 +1,46 @@
 import { useState } from 'react'
-import "./app.scss"
-import Dock from './Components/Dock'
-import Nav from './Components/Nav'
-import MacWindow from './Components/windows/MacWindow'
-import Github from './Components/windows/Github'
-import Note from './Components/windows/Note'
-import Resume from './Components/windows/Resume'
+import './app.scss'
+import Dock from './components/Dock'
+import Nav from './components/Nav'
 
+import Github from './components/windows/Github'
+import Note from './components/windows/Note'
+import Resume from './components/windows/Resume'
+import Spotify from './components/windows/Spotify'
+import Cli from './components/windows/Cli'
+
+const WINDOWS = {
+  github: Github,
+  note: Note,
+  resume: Resume,
+  spotify: Spotify,
+  cli: Cli
+}
 
 function App() {
+  const [windowsState, setWindowsState] = useState(
+    Object.fromEntries(
+      Object.keys(WINDOWS).map(key => [key, false])
+    )
+  )
+
   return (
-    <main>  
-      <Dock />
+    <main>
       <Nav />
+      <Dock
+        windowsState={windowsState}
+        setWindowsState={setWindowsState}
+      />
 
-      <MacWindow>
-        <h1>Hello, Welcome to my Portfolio!</h1>
-      </MacWindow>
-
-      <Github />
-      <Note />
-      <Resume />
+      {Object.entries(WINDOWS).map(([name, Component]) =>
+        windowsState[name] ? (
+          <Component
+            key={name}
+            windowName={name}
+            setWindowsState={setWindowsState}
+          />
+        ) : null
+      )}
     </main>
   )
 }

@@ -7,11 +7,11 @@ const Nav = () => {
         <nav>
             <div className="left">
                 <div className="apple-icon">
-                    <img src="/navbar-icon/apple.svg" alt="" />
+                    <img src="./navbar-icons/apple.svg" alt="" />
                 </div>
 
                 <div className="nav-item">
-                    <p>Mayank</p>
+                    <p>Ankur Prajapati</p>
                 </div>
 
                 <div className="nav-item">
