@@ -62,9 +62,9 @@ Location: San Francisco, CA`
         social: {
             description: 'View social media links',
             usage: 'social',
-            fn: () => `Twitter: @ankurdev
-LinkedIn: /in/ankurprajapati
-Portfolio: ankurprajapati.dev`
+            fn: () => `Twitter: https://x.com/maaayaankk
+LinkedIn: /in/mayank-kumar
+Portfolio: mayank.dev`
         },
         echo: {
             description: 'Echo a passed string',
@@ -96,7 +96,7 @@ Happy exploring! 🚀
                 <Terminal
                     commands={commands}
                     welcomeMessage={welcomeMessage}
-                    promptLabel={'ankurprajapati:~$'}
+                    promptLabel={'devmayank:~$'}
                     promptLabelStyle={{ color: '#00ff00' }}
                 />
             </div>
