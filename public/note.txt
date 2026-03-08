@@ -1,106 +1,94 @@
 /**
- * @file: profile.config.ts
- * @author: Engineering Portfolio
- * @summary: A high-performance full-stack engineer.
+ * @file: mayank.config.ts
+ * @author: Mayank Kumar
+ * @email: devmayank1005@gmail.com
+ * @summary: Full-stack web developer building modern web experiences.
  */
 
 
 // --------------------------------------------------
-// 1. CORE DEPENDENCIES & SKILLS
+// 1. CORE SKILLS
 // --------------------------------------------------
 
 const TECH_STACK = {
   frontend: [
-    "React.js",    // 100%
-    "Next.js",     // 95%
-    "TailwindCSS", // 90%
-    "Three.js",    // 70%
+    "React.js",      // primary framework
+    "Next.js",       // SSR / full-stack
+    "Vue.js",        // secondary framework
+    "Tailwind CSS",  // styling
+    "Sass/SCSS",     // styling
+    "HTML5 + CSS3",  // fundamentals
   ],
   backend: [
-    "Node.js",     // 90%
-    "PostgreSQL",  // 85%
-    "Redis",       // 75%
-    "Docker",      // 80%
+    "Node.js",       // runtime
+    "Express",       // API server
+    "Python",        // scripting & ML
+    "Django",        // Python web framework
   ],
-  tools: ["AWS", "Git", "Figma", "Linux"]
+  databases: [
+    "MongoDB",       // NoSQL
+    "PostgreSQL",    // relational
+    "MySQL",         // relational
+  ],
+  tools: ["Git", "Docker", "Vite", "Webpack", "AWS", "Azure"],
 };
 
-// --------------------------------------------------
-// 2. EXPERIENCE LOG (Reverse Chronological)
-// --------------------------------------------------
-
-class ProfessionalHistory {
-  
-  /**
-   * CURRENT ROLE
-   * @period 2023 - Present 
-   */
-  public async TechFlow_Systems(): Promise<Impact> {
-    const role = "Senior Full-Stack Engineer";
-    
-    // Key Achievements
-    const optimized = await api.optimize({ strategy: "Redis Caching" });
-    const latencyReduction = "40%";
-    
-    const leadership = this.mentor(["Jr. Dev 1", "Jr. Dev 2", "Jr. Dev 3"]);
-    const architecture = "Monolith -> Microservices Migration";
-    
-    return { role, optimized, architecture, leadership };
-  }
-
-  
-  /** * PREVIOUS ROLE
-   * @period 2021 - 2023
-   */
-  public PixelPerfect_Studios(): void {
-    this.role = "Frontend Developer";
-    this.focus = "High-Fidelity Animations";
-    
-    // Implemented GSAP scroll-triggers for 15+ clients
-    // Improved Lighthouse Performance Scores: 65 -> 98
-  }
-}
 
 // --------------------------------------------------
-// 3. COMPETITIVE ACHIEVEMENTS
+// 2. PROJECTS
 // --------------------------------------------------
 
-interface HackathonWin {
-  rank: number;
-  event: string;
-  project: string;
-}
-
-const trophyCabinet: HackathonWin[] = [
+const PROJECTS = [
   {
-    rank: 1,
-    event: "Global AI Hackathon 2024",
-    project: "EcoVision (Computer Vision Waste Segregation)",
-    // Prize: $5,000
+    name: "macOS Portfolio",
+    stack: ["React", "Vite", "Sass", "react-rnd"],
+    description: "This portfolio! Interactive macOS desktop simulation.",
+    status: "live" as const,
   },
   {
-    rank: 500, // Top 500 Global
-    event: "Google Code Jam 2023",
-    project: "Algorithm Optimization (Dynamic Programming)",
-  }
+    name: "Real-Time Chat App",
+    stack: ["React", "Socket.io", "Express", "Firebase"],
+    description: "WebSocket-powered group chat with auth & reactions.",
+    status: "complete" as const,
+  },
+  {
+    name: "Task Management Dashboard",
+    stack: ["Next.js", "Firebase", "Material-UI"],
+    description: "Drag-and-drop collaborative task manager.",
+    status: "complete" as const,
+  },
+  {
+    name: "E-Commerce Platform",
+    stack: ["React", "Node.js", "MongoDB", "Stripe"],
+    description: "Full-stack store with cart, payments & admin panel.",
+    status: "complete" as const,
+  },
+  {
+    name: "Data Dashboard",
+    stack: ["React", "Chart.js", "REST API"],
+    description: "Live analytics dashboard with interactive charts.",
+    status: "complete" as const,
+  },
 ];
 
+
 // --------------------------------------------------
-// 4. ACADEMIC BACKGROUND
+// 3. CONTACT
 // --------------------------------------------------
 
-const education = new Map<string, string>([
-  ["Stanford University", "MS Computer Science (3.9 GPA)"],
-  ["MIT World Peace Univ", "B.Tech Information Tech (8.8 CGPA)"]
-]);
+const CONTACT = {
+  email:    "devmayank1005@gmail.com",
+  linkedin: "linkedin.com/in/mayank-kumar-20a385334",
+  twitter:  "x.com/maaayaankk",
+  location: "India",
+};
 
-export default new ProfessionalHistory();
+
 // --------------------------------------------------
-// TERMINAL STATUS
+// STATUS
 // --------------------------------------------------
-// $ user --status
-// > Status: Open to Opportunities
-// > Location: Global / Remote
-// > Loading Assets... [||||||||||] 100%
-// > Ready.eady.
-```
+// $ mayank --status
+// > Open to: Internships, Freelance & Full-time roles
+// > Location: India / Remote
+// > Loading portfolio... [██████████] 100%
+// > Welcome!

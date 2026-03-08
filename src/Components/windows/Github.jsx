@@ -24,9 +24,9 @@ const GitCard = ({ data = { id: 1, image: "", title: "", description: "", tags: 
 }
 
 
-const Github = ({ windowName, setWindowsState }) => {
+const Github = ({ windowName, windowTitle, setWindowsState }) => {
     return (
-        <MacWindow windowName={windowName} setWindowsState={setWindowsState} >
+        <MacWindow windowName={windowName} windowTitle={windowTitle} setWindowsState={setWindowsState} width="60vw" height="65vh">
             <div className="cards">
                 {githubData.map(project => {
                     return <GitCard data={project} />

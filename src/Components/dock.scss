@@ -1,105 +1,134 @@
-/* ---------- Global Reset ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-  height: 100%;
-  width: 100%;
-}
-
-/* ---------- App Background ---------- */
-main {
-  height: 100%;
-  width: 100%;
-  background-image: url('/mac-wallpaper.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* ---------- Dock ---------- */
 .dock {
   position: fixed;
-  bottom: 1rem;
+  bottom: 0.9rem;
   left: 50%;
   transform: translateX(-50%);
 
   display: flex;
-  gap: 0.75rem;
+  align-items: flex-end;
+  gap: 8px;
 
-  padding: 0.75rem 1rem;
-  border-radius: 0.9rem;
+  padding: 8px 12px 6px;
+  border-radius: 18px;
 
-  background: rgba(70, 70, 70, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(60, 60, 65, 0.42);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-/* ---------- Dock Icons ---------- */
+/* ---------- Icon wrapper ---------- */
 .icon {
-  width: 3.75rem;
-  aspect-ratio: 1 / 1;
+  position: relative;
+  flex-shrink: 0;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 
-  padding: 0.6rem;
-  border-radius: 0.55rem;
+  padding: 10%;
+  border-radius: 22%;
+  cursor: pointer;
 
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  /* smooth size & lift transitions */
+  transition:
+    width  0.12s ease,
+    height 0.12s ease,
+    transform 0.12s ease;
 
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  /* stop tooltip from overflowing dock */
+  overflow: visible;
 }
 
-/* ---------- SVG sizing ---------- */
+/* ---------- Icon image ---------- */
 .icon img {
-  width: 70%;
-  height: 70%;
+  width: 68%;
+  height: 68%;
   object-fit: contain;
   pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
 }
 
-/* ---------- Hover physics (macOS-like) ---------- */
-.icon:hover {
-  transform: translateY(-35%) scale(1.35);
+/* ---------- Tooltip ---------- */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  background: rgba(28, 28, 30, 0.88);
+  backdrop-filter: blur(8px);
+  color: #f5f5f7;
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.01em;
+
+  padding: 4px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
 }
 
-.icon:hover + .icon,
-.icon:has(+ .icon:hover) {
-  transform: translateY(-20%) scale(1.15);
+.icon:hover .tooltip {
+  opacity: 1;
+}
+
+/* ---------- Active dot (open window indicator) ---------- */
+.dot {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 4px rgba(255,255,255,0.5);
 }
 
 /* ---------- Icon color themes ---------- */
 .github,
 .cli {
-  background: #000;
+  background: #1a1a1a;
 }
 
 .note {
-  background: linear-gradient(to bottom, rgb(255, 179, 87), rgb(255, 153, 28));
+  background: linear-gradient(160deg, #ffb83d, #ff8c00);
 }
 
 .pdf {
-  background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40));
+  background: linear-gradient(160deg, #ff4d5a, #e0001a);
 }
 
-.calendar,
+/* fix: JSX uses .calender, CSS must match */
+.calender {
+  background: linear-gradient(160deg, #3b82f6, #1d4ed8);
+}
+
 .mail {
-  background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255));
+  background: linear-gradient(160deg, #6366f1, #4338ca);
 }
 
 .spotify {
-  background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12));
+  background: linear-gradient(160deg, #34d058, #1db954);
 }
 
 .link {
-  background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 154));
+  background: linear-gradient(160deg, #0ea5e9, #0369a1);
 }

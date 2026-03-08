@@ -2,7 +2,7 @@ import React from 'react'
 import { Rnd } from 'react-rnd'
 import "./window.scss"
 
-const MacWindow = ({ children, width = "40vw", height = "40vh", windowName, setWindowsState }) => {
+const MacWindow = ({ children, width = "40vw", height = "40vh", windowName, windowTitle, setWindowsState }) => {
     return (
         <Rnd
             default={{
@@ -20,7 +20,7 @@ const MacWindow = ({ children, width = "40vw", height = "40vh", windowName, setW
                         <div className="dot green"></div>
                     </div>
 
-                    <div className="title"><p>mayank - zsh</p></div>
+                    <div className="title"><p>{windowTitle || windowName}</p></div>
 
                 </div>
                 <div className="main-content">
